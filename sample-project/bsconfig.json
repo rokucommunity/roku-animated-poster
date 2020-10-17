@@ -1,0 +1,20 @@
+{
+  "rootDir": "src",
+  "files": [
+    "manifest",
+    "source/**/*.*",
+    "components/**/*.*",
+    "images/**/*.*"
+  ],
+  "autoImportComponentScript": true,
+  "createPackage": false,
+  "stagingFolderPath": "dist",
+  "diagnosticFilters": [
+    {
+      "src": "**/roku_modules/**/*.*",
+      "codes": [
+        1107
+      ]
+    }
+  ]
+}
