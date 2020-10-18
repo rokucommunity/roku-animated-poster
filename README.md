@@ -1,6 +1,6 @@
 # Roku Animated Poster
 
-Simple animated poster you can use in your roku apps.
+Component for providing animated posters
 
 ![build](https://github.com/rokucommunity/roku-animated-poster/workflows/build/badge.svg)
 [![NPM Version](https://badge.fury.io/js/roku-animated-poster.svg?style=flat)](https://npmjs.org/package/roku-animated-poster)
@@ -11,3 +11,109 @@ Simple animated poster you can use in your roku apps.
 ropm install roku-animated-poster
 ```
 
+suggestion: use a shorter prefix:
+
+```bash
+ropm install ap@npm:roku-animated-poster
+```
+
+## Usage
+
+Follow these steps:
+
+  1. Declare an animated poster
+  1. Set the spritesheet uri
+  1. Set the tile offsets for animation
+  1. Play!
+
+### Declare an animated poster component
+
+#### In XML
+
+Declare your animated poster with the target width and height!
+
+*without prefix:*
+
+```
+  <rokuanimatedposter_AnimatedPoster 
+      id="poster"
+      width='240'
+      height='240' />
+```
+
+
+*using ap prefix:*
+
+```
+  <ap_AnimatedPoster 
+      id="poster"
+      width='240'
+      height='240' />
+```
+
+#### In Brighterscript
+
+*without prefix:*
+
+```
+  poster = createObject("roSGNode", "rokuanimatedposter_AnimatedPoster")
+  poster.width = 240
+  poster.height = 240
+```
+
+
+*using ap prefix:*
+
+```
+  poster = createObject("roSGNode", "ap_AnimatedPoster")
+  poster.width = 240
+  poster.height = 240
+```
+
+### Set the spritesheet Uri
+
+Animated poster works by moving a larger image, inside of a clipped group, to create the effect of an animation.
+
+You need therefore need to supply the poster with a _spritesheet_, which is, multiple images in one image, with all of the animation frames for your image, as such:
+
+![spritesheet sample](test-project/images/s.png)
+
+Note:
+Be careful to note you can easily blow out texture ram, by loading too big of an image.
+
+
+
+### Set the tile offsets for animation
+
+Provide the Animated poster with an array of `[x,y]` values for each frame of your animation, e.g. for the image referenced here:
+
+```
+  poster.frameOffsets = [
+    [0, 0]
+    [240, 0]
+    [480, 0]
+    [720, 0]
+    [960, 0]
+    [1200, 0]
+  ]
+
+```
+
+Note: the offsets can be any x and y within the image.
+
+### Play!
+
+Use `control`, `duration` and `loopMode` (valid values: `once`, `loop`, `ping-pong`) to control your animation. e.g.
+
+```
+  poster.duration = 0.1
+  poster.control = "start"
+```
+
+## Notes
+
+Animated posters are a workaround for a missing Roku SDK feature. They are intended for use for icons, gamification, and UX flare. This implementation is a reference implementation only, and can be greatly improved. The real solution for animated images on Roku, is _ask Roku to add this missing feature to their SDK, with proper gif support._
+
+### Performance
+
+Animated poster performance is suprisingly good. You can get > 100 animated posters on a 9200x, without any glitches, and as many as 30 on a *roku 1*. However, you should take care to ensure the quality of your app's performance when using this component.
