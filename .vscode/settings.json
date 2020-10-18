@@ -1,6 +1,7 @@
 {
   "files.exclude": {
     "test-project": true,
-    "*.code-workspace": true
+    "*.code-workspace": true,
+    "node_modules": true
   }
 }

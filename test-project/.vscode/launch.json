@@ -9,19 +9,8 @@
       "request": "launch",
       "name": "run",
       "stopOnEntry": false,
-      "envFile": "${workspaceFolder}/.vscode/.env",
-      "host": "${env:ROKU_DEV_TARGET}",
-      "password": "${env:ROKU_DEVPASSWORD}",
-      "rootDir": "${workspaceFolder}/src",
-      "files": [
-        "manifest",
-        "source/**/*.*",
-        "components/**/*.*",
-        "images/**/*.*",
-        "font/**/*.*",
-        "!*.zip",
-        "!**/*.zip"
-      ],
+      "host": "${promptForHost}",
+      "password": "${promptForPassword}"
     }
   ]
 }

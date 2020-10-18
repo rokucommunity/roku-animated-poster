@@ -1,37 +1,12 @@
 {
-  "name": "roku-animated-poster-sample",
-  "version": "0.1.0",
-  "description": "Roku Animated Poster sample project",
+  "private": true,
   "dependencies": {
     "ap": "file:../"
   },
   "devDependencies": {
-    "brighterscript": "^0.15.0",
-    "ropm": "^0.5.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rokucommunity/roku-animated-poster.git"
-  },
-  "keywords": [],
-  "author": "George Cook",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rokucommunity/roku-animated-poster/issues"
-  },
-  "homepage": "https://github.com/rokucommunity/roku-animated-poster#readme",
-  "ts-node": {
-    "transpileOnly": true,
-    "compileOptions": {
-      "incremental": true,
-      "allowJs": false
-    }
+    "ropm": "^0.6.3"
   },
   "ropm": {
-    "rootDir": "src",
-    "packageRootDir": "dist"
-  },
-  "scripts": {
-    "build": "npx bsc"
+    "rootDir": "src"
   }
 }

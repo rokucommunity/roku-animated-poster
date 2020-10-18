@@ -2,17 +2,16 @@
     "name": "roku-animated-poster",
     "version": "0.1.0",
     "description": "Poster replacement, which facililitates sprite-sheet based animation",
-    "directories": {
-        "doc": "docs"
+    "scripts": {
+        "preversion": "npm run validate",
+        "validate": "bsc --create-package=false --copy-to-staging=false"
     },
     "files": [
-        "dist/**/!(manifest)*",
-        "!roku_modules"
+        "src/**/*"
     ],
     "dependencies": {},
     "devDependencies": {
-        "brighterscript": "^0.15.0",
-        "ropm": "^0.5.0"
+        "brighterscript": "^0.16.8"
     },
     "repository": {
         "type": "git",
@@ -34,19 +33,7 @@
         "url": "https://github.com/rokucommunity/roku-animated-poster/issues"
     },
     "homepage": "https://github.com/rokucommunity/roku-animated-poster#readme",
-    "ts-node": {
-        "transpileOnly": true,
-        "compileOptions": {
-            "incremental": true,
-            "allowJs": false
-        }
-    },
     "ropm": {
-        "rootDir": "src",
-        "packageRootDir": "dist"
-    },
-    "scripts": {
-        "build": "npx bsc",
-        "test": "cd tests && npx ropm copy && bsc --project ./bsconfig.json"
+        "packageRootDir": "src"
     }
 }
