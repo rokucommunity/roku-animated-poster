@@ -6,9 +6,8 @@
       "request": "launch",
       "name": "run",
       "stopOnEntry": false,
-      "host": "192.168.1.147",
-      "password": "1111",
-      "preLaunchTask": "ropmInstall"
+      "host": "${promptForHost}",
+      "password": "${promptForPassword}"
     }
   ]
 }
