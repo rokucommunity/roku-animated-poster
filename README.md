@@ -6,7 +6,11 @@ Component for providing animated posters
 [![NPM Version](https://badge.fury.io/js/roku-animated-poster.svg?style=flat)](https://npmjs.org/package/roku-animated-poster)
 
 ## Installation
+
 ### Using ropm
+
+Use the [ropm package manager for roku](https://github.com/rokucommunity/ropm)
+
 ```bash
 ropm install roku-animated-poster
 ```
