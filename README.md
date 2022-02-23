@@ -7,6 +7,11 @@ Component for providing animated posters
 
 ## Installation
 
+
+FIRST! Please take a look at: https://github.com/georgejecook/Animated-GIF-Roku-Demo
+
+it might be that is more suitable for your needs.
+
 ### Using ropm
 
 Use the [ropm package manager for roku](https://github.com/rokucommunity/ropm)
