@@ -2,7 +2,7 @@
 
 Component for providing animated posters
 
-[![build status](https://img.shields.io/github/workflow/status/rokucommunity/roku-animated-poster/build.svg?logo=github)](https://github.com/rokucommunity/roku-animated-poster/actions?query=workflow%3Abuild)
+[![build status](https://img.shields.io/github/actions/workflow/status/rokucommunity/roku-animated-poster/build.yml?branch=master&logo=github)](https://github.com/rokucommunity/roku-animated-poster/actions?query=branch%3Amaster+workflow%3Abuild)
 [![monthly downloads](https://img.shields.io/npm/dm/roku-animated-poster.svg?sanitize=true&logo=npm&logoColor=)](https://npmcharts.com/compare/roku-animated-poster?minimal=true)
 [![npm version](https://img.shields.io/npm/v/roku-animated-poster.svg?logo=npm)](https://www.npmjs.com/package/roku-animated-poster)
 [![license](https://img.shields.io/github/license/rokucommunity/roku-animated-poster.svg)](LICENSE)
@@ -47,7 +47,7 @@ Declare your animated poster with the target width and height!
 *without prefix:*
 
 ```
-  <rokuanimatedposter_AnimatedPoster 
+  <rokuanimatedposter_AnimatedPoster
       id="poster"
       width='240'
       height='240' />
@@ -57,7 +57,7 @@ Declare your animated poster with the target width and height!
 *using ap prefix:*
 
 ```
-  <ap_AnimatedPoster 
+  <ap_AnimatedPoster
       id="poster"
       width='240'
       height='240' />
