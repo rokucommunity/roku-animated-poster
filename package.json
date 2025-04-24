@@ -4,7 +4,8 @@
     "description": "Poster replacement, which facililitates sprite-sheet based animation",
     "scripts": {
         "preversion": "npm run validate",
-        "validate": "bsc --create-package=false --copy-to-staging=false"
+        "validate": "bsc --create-package=false --copy-to-staging=false",
+        "package": "npm run build && npm pack"
     },
     "files": [
         "src/**/*"
